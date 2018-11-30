@@ -1,0 +1,34 @@
+﻿@model Whiteboard.Models.TaggedWhiteboard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaggedWhiteboard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag.TagName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag.TagName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhiteboardItem.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhiteboardItem.ImageURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TaggedWhiteboardID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
